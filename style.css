@@ -34,7 +34,8 @@ body * {
   color: var(--text-color);
 }
 #container {
-  width: 360px;
+  width: 100%;
+  max-width: 588px;
   margin: 56px auto 0px;
   padding: 0 24px;
 }
@@ -75,9 +76,9 @@ body * {
   transform: translateY(-50%);
 }
 
-.light #switch button{
-right: 0;
-left: initial;
+.light #switch button {
+  right: 0;
+  left: initial;
 }
 
 /* #switch button :hover {
