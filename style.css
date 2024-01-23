@@ -57,7 +57,7 @@ body * {
   margin-top: 8px;
 }
 
-/* Switch: */
+/* Switch settings: */
 #switch {
   position: relative;
   width: 64px;
@@ -75,15 +75,35 @@ body * {
   z-index: 1;
   top: 50%;
   transform: translateY(-50%);
+  animation: slide 0.2s;
 }
 
 .light #switch button {
-  right: 0;
-  left: initial;
+  animation: slide-back 0.2s forwards;
 }
 
-/* #switch button :hover {
-} */
+/* Switch animation */
+@keyframes slide {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
+}
 
 #switch span {
   display: block;
